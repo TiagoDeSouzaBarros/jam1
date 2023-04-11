@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="Jam1"
-config/features=PackedStringArray("4.0", "Mobile")
+config/features=PackedStringArray("4.0", "C#", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=360
+window/size/viewport_height=240
+window/size/window_width_override=720
+window/size/window_height_override=480
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
@@ -20,4 +28,5 @@ project/assembly_name="Jam1"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"

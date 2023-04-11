@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkej5n1qk8lqu"]
+[gd_scene load_steps=4 format=3 uid="uid://dkej5n1qk8lqu"]
 
 [ext_resource type="Script" path="res://Scenes/player.cs" id="1_toviq"]
+[ext_resource type="Texture2D" uid="uid://dfosftmw78syy" path="res://Art/p1.png" id="2_yahet"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r5s00"]
+radius = 8.0
+height = 26.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_toviq")
 
+[node name="Corpo" type="Sprite2D" parent="."]
+texture = ExtResource("2_yahet")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_r5s00")
