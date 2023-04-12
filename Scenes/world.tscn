@@ -5,7 +5,7 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0jjpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxx8c"]
-size = Vector2(283, 9)
+size = Vector2(681, 9)
 
 [node name="World" type="Node2D"]
 
@@ -14,7 +14,7 @@ position = Vector2(56, 139)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 material = SubResource("CanvasItemMaterial_0jjpc")
-position = Vector2(94.5, 84.5)
+position = Vector2(293.5, 84.5)
 shape = SubResource("RectangleShape2D_sxx8c")
 
 [node name="Player" parent="." instance=ExtResource("1_ppa6e")]
