@@ -15,7 +15,7 @@ public partial class player : CharacterBody2D
 	public Sprite2D weapon;
 	public override void _Ready(){
 		corpo = GetNode<Node2D>("Char");
-		weapon = GetNode<Sprite2D>("WeaponGun");
+		weapon = GetNode<Sprite2D>("Char/WeaponGun");
 	}
 	public override void _PhysicsProcess(double delta)
 	{
@@ -42,6 +42,8 @@ public partial class player : CharacterBody2D
 		}
 
 		Velocity = velocity;
+
+		weapon.LookAt(GetGlobalMousePosition());			
 
 		if(Velocity.X < 0) corpo.Scale  = new Vector2(-1, 1);
 		if(Velocity.X > 0) corpo.Scale = new Vector2(1, 1);

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhop1x43yvqed"]
+
+[ext_resource type="Texture2D" uid="uid://0qgd06upouga" path="res://Art/b1.png" id="1_r21pm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvp2s"]
+size = Vector2(3, 2)
+
+[node name="RegularBullet" type="Area2D"]
+
+[node name="collider" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_bvp2s")
+
+[node name="image" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_r21pm")
+offset = Vector2(1, 0)
