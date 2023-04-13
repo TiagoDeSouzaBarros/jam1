@@ -28,7 +28,10 @@ public partial class Weapon : Node2D
 		QueueFree();		
 	}
 	public void Fire(){
-		var tiro  = bullet.Instantiate();
+		 var  tiro  =  bullet.Instantiate();
+		// regular_bullet. = 
 		AddChild(tiro);
+		
+		
 	}
 }

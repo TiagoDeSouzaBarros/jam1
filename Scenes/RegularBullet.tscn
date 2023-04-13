@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhop1x43yvqed"]
+[gd_scene load_steps=4 format=3 uid="uid://busntxp3g1sxu"]
 
-[ext_resource type="Script" path="res://Scripts/regular_bullet.cs" id="1_cbpj1"]
-[ext_resource type="Texture2D" uid="uid://0qgd06upouga" path="res://Art/b1.png" id="1_r21pm"]
+[ext_resource type="Script" path="res://Scripts/regular_bullet.cs" id="1_63edk"]
+[ext_resource type="Texture2D" uid="uid://0qgd06upouga" path="res://Art/b1.png" id="2_uxoyr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bvp2s"]
 size = Vector2(3, 2)
 
 [node name="RegularBullet" type="Area2D"]
-script = ExtResource("1_cbpj1")
+script = ExtResource("1_63edk")
 damage = 1
 speed = 10.0
 
@@ -17,5 +17,5 @@ shape = SubResource("RectangleShape2D_bvp2s")
 
 [node name="image" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
-texture = ExtResource("1_r21pm")
+texture = ExtResource("2_uxoyr")
 offset = Vector2(1, 0)
