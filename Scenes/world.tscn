@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5rka6eih318m"]
+[gd_scene load_steps=5 format=3 uid="uid://b5rka6eih318m"]
 
 [ext_resource type="PackedScene" uid="uid://dkej5n1qk8lqu" path="res://Scenes/player.tscn" id="1_ppa6e"]
+[ext_resource type="PackedScene" uid="uid://wo2ljvwgit60" path="res://Scenes/weapon.tscn" id="2_n34yg"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0jjpc"]
 
@@ -19,3 +20,6 @@ shape = SubResource("RectangleShape2D_sxx8c")
 
 [node name="Player" parent="." instance=ExtResource("1_ppa6e")]
 position = Vector2(81, 162)
+
+[node name="Weapon" parent="." instance=ExtResource("2_n34yg")]
+position = Vector2(148, 120)
