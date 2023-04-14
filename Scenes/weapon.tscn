@@ -5,12 +5,11 @@
 
 [node name="Weapon" type="Node2D"]
 script = ExtResource("1_22vrr")
-intervalShot = 1.0
 
 [node name="Imagem" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
 texture = ExtResource("2_px3xw")
-offset = Vector2(8, 0)
 
 [node name="ShootPoint" type="Marker2D" parent="Imagem"]
-position = Vector2(5, 0)
+position = Vector2(6, -2)
 gizmo_extents = 19.0

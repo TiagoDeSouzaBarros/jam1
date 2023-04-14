@@ -31,7 +31,7 @@ public partial class Weapon : Node2D
 	{
 		mousePosition = GetGlobalMousePosition();
 
-		imagem.LookAt(mousePosition);
+		LookAt(mousePosition);
 
 		if(Input.IsActionPressed("Fire")  ) Fire(delta);
 		shotTimer += delta;
@@ -42,16 +42,14 @@ public partial class Weapon : Node2D
 	}
 	public void Fire(double delta){
 		if(shotTimer >= (delta + intervalShot)){
-			var  tiro  = (regular_bullet) bullet.Instantiate();
+			var  tiro  = (Node2D) bullet.Instantiate();
 			var direction = (mousePosition - ShootPoint.Position).Normalized();
 			var angle= Mathf.Atan2(direction.Y, direction.X);
-			tiro.Position = ShootPoint.Position;
-			tiro.Rotation = imagem.Rotation;
+			tiro.GlobalPosition  = ShootPoint.GlobalPosition;
+			tiro.Rotation = Rotation;
 			
 			//tiro.LookAt(GetGlobalMousePosition());
-			
-			
-			AddChild(tiro);
+			GetParent<Node2D>().AddChild(tiro);
 			shotTimer = 0;
 		}
 	}
